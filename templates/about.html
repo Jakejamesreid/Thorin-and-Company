@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2>About Page</h2>
+{% for number in list_of_numbers %}
+    <p>{{ number }}</p>
+{% endfor %}
+<h2>{{ page_title }}</h2>
 <p>
     The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest in
     recapturing his long lost family inheritance. (Thorin's grandfather had been the king of the Lonely Mountain when
@@ -13,7 +16,7 @@
 </p>
 <div class="row featurette">
     <div class="col-md-7">
-        <h3>Thorin Oakenshield</h3>
+        <h3>{{ company[0]["name"] }}</h3>
         <p>
             In the year TA 2746, Thorin II was born to Dwarven prince Thráin II in the mountain city of The Lonely
             Mountain. Early in his youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the
